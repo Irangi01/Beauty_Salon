@@ -39,7 +39,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative h-[500px] md:h-[600px] overflow-hidden">
           <Image
-            src="/assets/Hero.jpg"
+            src="/assets/Hero1.png"
             alt="Beauty artist background"
             fill
             className="object-cover"
@@ -182,7 +182,7 @@ export default function Home() {
               </div>
 
               <div className="relative h-[500px] rounded-lg overflow-hidden">
-                <Image src="/assets/bride4.jpg" alt="Bridal makeup" fill className="object-cover" />
+                <Image src="/assets/bride1.png" alt="Bridal makeup" fill className="object-cover" />
               </div>
             </div>
           </div>
@@ -274,7 +274,7 @@ export default function Home() {
                 <Link href="/blog/beauty-tips-1" className="block h-full">
                   <div className="h-full w-full overflow-hidden">
                     <Image
-                      src="/assets/m-icon.jpg"
+                      src="/assets/blog2.png"
                       alt="Beauty blog 1"
                       width={130}
                       height={280}
@@ -289,7 +289,7 @@ export default function Home() {
                 <Link href="/blog/beauty-tips-2" className="block h-full">
                   <div className="h-full w-full overflow-hidden">
                     <Image
-                      src="/assets/m-icon.jpg"
+                      src="/assets/blog3.png"
                       alt="Beauty blog 2"
                       width={180}
                       height={330}
@@ -305,7 +305,7 @@ export default function Home() {
                   <div className="w-full">
                     <div className="w-full h-[300px] overflow-hidden">
                       <Image
-                        src="/assets/m-icon.jpg"
+                        src="/assets/blog1.png"
                         alt="Bridal makeup trends"
                         width={300}
                         height={300}
@@ -332,7 +332,7 @@ export default function Home() {
                 <Link href="/blog/beauty-tips-3" className="block h-full">
                   <div className="h-full w-full overflow-hidden">
                     <Image
-                      src="/assets/m-icon.jpg"
+                      src="/assets/blog4.png"
                       alt="Beauty blog 3"
                       width={180}
                       height={330}
@@ -347,7 +347,7 @@ export default function Home() {
                 <Link href="/blog/beauty-tips-4" className="block h-full">
                   <div className="h-full w-full overflow-hidden">
                     <Image
-                      src="/assets/m-icon.jpg"
+                      src="/assets/blog5.png"
                       alt="Beauty blog 4"
                       width={130}
                       height={280}
@@ -564,25 +564,8 @@ const serviceCards = [
 ]
 
 const vacationImages = [
-  "/assets/s-1.jpg",
-  "/assets/s-2.jpg",
-  "/assets/s-3.jpg",
+  "/assets/hair2.png",
+  "/assets/hair1.png",
+  "/assets/hair3.png",
 ]
 
-const blogPosts = [
-  {
-    title: "Hair Care Tips",
-    excerpt: "Discover the hottest makeup trends for this summer season.",
-    image: "/assets/hair.jpg",
-  },
-  {
-    title: "Skincare Routine for Dry Skin",
-    excerpt: "The perfect skincare routine to combat dry skin in any season.",
-    image: "/assets/skincare.jpg",
-  },
-  {
-    title: "Best Pedicure Services",
-    excerpt: "Essential tips for brides to ensure perfect makeup on their special day.",
-    image: "/assets/pedi1.jpg",
-  },
-]
