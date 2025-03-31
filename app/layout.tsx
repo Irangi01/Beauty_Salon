@@ -6,7 +6,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Beauty Artist - Professional Makeup & Beauty Services",
+  title: "GlamAuraStudio",
   description: "Professional makeup artist offering bridal, special occasion, and everyday beauty services.",
 }
 
