@@ -10,133 +10,138 @@ import { Button } from "@/components/ui/button"
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Header/Navigation */}
-      <header className="sticky top-0 z-50 w-full bg-black/70 backdrop-blur-sm">
-        <div className="container mx-auto flex h-16 items-center justify-between px-8">
-          <div className="font-semibold text-xl text-white">GlamAuraStudio</div>
-          <nav className="flex items-center space-x-6">
-            <Link href="#" className="text-sm font-medium text-white hover:text-primary/90">
-              Home
-            </Link>
-            <Link href="#" className="text-sm font-medium text-white hover:text-primary/90">
-              Services
-            </Link>
-            <Link href="#" className="text-sm font-medium text-white hover:text-primary/90">
-              About Us
-            </Link>
-            <Link href="#" className="text-sm font-medium text-white hover:text-primary/90">
-              Contact
-            </Link>
-          </nav>
-          <div className="relative group">
-            <button className="flex items-center text-white rounded-full border border-white/30 px-3 py-1 h-auto space-x-2">
+      {/* Header*/}
+      <main className="flex-1">
+        {/* Hero Section with integrated Navbar */}
+        <section className="relative h-[500px] md:h-[600px] overflow-hidden">
+  <Image
+    src="/assets/Hero1.png"
+    alt="Beauty artist background"
+    fill
+    className="object-cover"
+    priority
+  />
+
+  {/* Navigation Bar */}
+  <div className="absolute top-0 w-full z-10">
+    <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
+      <div className="font-semibold text-xl text-white">GlamAuraStudio</div>
+      <nav className="hidden md:flex items-center space-x-6">
+        <Link href="#" className="text-sm font-medium text-white hover:text-white hover:underline">
+          Home
+        </Link>
+        <Link href="#" className="text-sm font-medium text-white hover:text-white hover:underline">
+          Services
+        </Link>
+        <Link href="#" className="text-sm font-medium text-white hover:text-white hover:underline">
+          About Us
+        </Link>
+        <Link href="#" className="text-sm font-medium text-white hover:text-white hover:underline">
+          Contact
+        </Link>
+      </nav>
+      <div className="relative group">
+        <button className="flex items-center text-white rounded-full border border-white/30 px-3 py-1 h-auto space-x-2">
+          <img
+            src="https://flagcdn.com/w20/au.png"
+            alt="Australian Flag"
+            className="w-5 h-3 object-cover"
+          />
+          <span>ENG</span>
+          <ChevronDown className="h-3 w-3 opacity-50" />
+        </button>
+        <div className="absolute right-0 mt-2 w-40 origin-top-right bg-white/90 backdrop-blur-md rounded-md shadow-lg hidden group-hover:block">
+          <div className="py-1">
+            <a href="#" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
               <img
-                src="https://flagcdn.com/w20/au.png"
-                alt="Australian Flag"
-                className="w-5 h-3 object-cover"
+                src="https://flagcdn.com/w20/us.png"
+                alt="USA Flag"
+                className="w-5 h-3 mr-2 object-cover"
               />
-              <span>ENG</span>
-              <ChevronDown className="h-3 w-3 opacity-50" />
-            </button>
-            <div className="absolute right-0 mt-2 w-40 origin-top-right bg-white/90 backdrop-blur-md rounded-md shadow-lg hidden group-hover:block">
-              <div className="py-1">
-                <a href="#" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  <img
-                    src="https://flagcdn.com/w20/us.png"
-                    alt="USA Flag"
-                    className="w-5 h-3 mr-2 object-cover"
-                  />
-                  English (US)
-                </a>
-                <a href="#" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  <img
-                    src="https://flagcdn.com/w20/fr.png"
-                    alt="French Flag"
-                    className="w-5 h-3 mr-2 object-cover"
-                  />
-                  Français
-                </a>
-                <a href="#" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  <img
-                    src="https://flagcdn.com/w20/es.png"
-                    alt="Spanish Flag"
-                    className="w-5 h-3 mr-2 object-cover"
-                  />
-                  Español
-                </a>
-              </div>
-            </div>
+              English (US)
+            </a>
+            <a href="#" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+              <img
+                src="https://flagcdn.com/w20/fr.png"
+                alt="French Flag"
+                className="w-5 h-3 mr-2 object-cover"
+              />
+              Français
+            </a>
+            <a href="#" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+              <img
+                src="https://flagcdn.com/w20/es.png"
+                alt="Spanish Flag"
+                className="w-5 h-3 mr-2 object-cover"
+              />
+              Español
+            </a>
           </div>
         </div>
-      </header>
+      </div>
+    </div>
+  </div>
 
-      <main className="flex-1">
-        {/* Hero Section */}
-        <section className="relative h-[500px] md:h-[600px] overflow-hidden">
-          <Image
-            src="/assets/Hero1.png"
-            alt="Beauty artist background"
-            fill
-            className="object-cover"
-            priority
-          />
-
-          <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent">
-            <div className="container mx-auto h-full flex flex-col justify-center px-8">
-              <div className="flex flex-col md:flex-row items-center md:items-start justify-between">
-                {/* Left content - Hero text */}
-                <div className="max-w-xl space-y-4 text-center md:text-left">
-                  <h1 className="text-4xl md:text-5xl font-bold text-white">
-                    Clear Focus, Brighter Tomorrow
-                  </h1>
-                  <p className="text-white/90 text-lg">
-                    Enhance your natural beauty with our professional makeup and beauty services. We specialize in creating
-                    looks that make you feel confident and radiant.
-                  </p>
-                  <div className="flex justify-center md:justify-start items-center gap-4">
-                    <Button className="rounded-full">
-                      <Play className="mr-2 h-4 w-4" /> Watch Video
-                    </Button>
-                  </div>
-                  <div className="mt-8 flex justify-center md:justify-start items-center gap-4">
-                    <div className="flex -space-x-3">
-                      {[1, 2, 3].map((i) => (
-                        <div
-                          key={i}
-                          className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-white"
-                        >
-                          <Image
-                            src={`/assets/2.jpg`}
-                            alt={`Customer ${i}`}
-                            fill
-                            className="object-cover"
-                          />
-                        </div>
-                      ))}
-                    </div>
-                    <span className="text-white text-sm">Trusted by 2,000+ customers</span>
-                  </div>
-                </div>
-
-                {/* Right side - Quick Booking Card */}
-                <div className="md:absolute md:right-10 md:bottom-20 mt-10 md:mt-0 bg-white/10 backdrop-blur-lg p-6 border border-white/20 w-full md:max-w-xs shadow-lg">
-                  <h3 className="text-xl font-bold text-white mb-3">Quick Booking</h3>
-                  <p className="text-white/80 mb-5 text-sm">
-                    Get up to 30% discount on your first visit
-                  </p>
-                  <Button className="w-full bg-white text-gray-900 hover:bg-white/90 font-medium">
-                    Book Appointment
-                  </Button>
-                </div>
-              </div>
-            </div>
+  {/* Hero Content */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent pt-16">
+    <div className="container mx-auto h-full flex flex-col justify-center px-4 md:px-8">
+      <div className="flex flex-col md:flex-row items-center md:items-start justify-between">
+        {/* Left content - Hero text */}
+        <div className="max-w-xl space-y-4 text-center md:text-left">
+          <h1 className="text-3xl md:text-5xl font-bold text-white">
+            Clear Focus, Brighter Tomorrow
+          </h1>
+          <p className="text-white/90 text-base md:text-lg">
+            Enhance your natural beauty with our professional makeup and beauty services. We specialize in creating
+            looks that make you feel confident and radiant.
+          </p>
+          <div className="flex justify-center md:justify-start items-center gap-4">
+            <Button className="rounded-full text-sm md:text-base">
+              <Play className="mr-2 h-4 w-4" /> Watch Video
+            </Button>
           </div>
-        </section>
+          <div className="mt-6 md:mt-8 flex justify-center md:justify-start items-center gap-4">
+            <div className="flex -space-x-3">
+              {[1, 2, 3].map((i) => (
+                <div
+                  key={i}
+                  className="relative w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden border-2 border-white"
+                >
+                  <Image
+                    src={`/assets/2.png`}
+                    alt={`Customer ${i}`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+            <span className="text-white text-xs md:text-sm">Trusted by 2,000+ customers</span>
+          </div>
+        </div>
+
+        {/* Right side - Quick Booking Card */}
+        <div className="mt-8 md:absolute md:right-10 md:bottom-20 md:mt-0 bg-white/10 backdrop-blur-lg p-4 md:p-6 border border-white/20 w-full md:max-w-xs shadow-lg">
+          <h3 className="text-lg md:text-xl font-bold text-white mb-3">Quick Booking</h3>
+          <p className="text-white/80 mb-4 md:mb-5 text-xs md:text-sm">
+            Get up to 30% discount on your first visit
+          </p>
+          <Button className="w-full bg-white text-gray-900 hover:bg-white/90 font-medium text-sm md:text-base">
+            Book Appointment
+          </Button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
         {/* Services Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-8">
-            <div className="text-center mb-12">
+            {/* Changed from text-center to text-left */}
+            <div className="text-left mb-12">
               <h2 className="text-3xl font-bold">Our Services</h2>
               <p className="text-gray-600 mt-2">
                 Complete Your Service With Beautiful Makeup And Simply Be Amazing With Complete Look.
@@ -146,19 +151,22 @@ export default function Home() {
             {/* Service Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {serviceCards.map((service, index) => (
-                <div key={index} className="border p-8 flex flex-col items-center text-center">
+                <div key={index} className="border border-black p-8 flex flex-col items-center text-center"> {/* Added border-black */}
                   <div className="mb-4">{service.icon}</div>
                   <h3 className="font-semibold text-lg mb-2">{service.name}</h3>
                   <p className="text-gray-600 text-sm mb-4">{service.description}</p>
-                  <Link href="#" className="text-sm font-medium flex items-center">
+                  <Link href="#" className="text-sm font-medium flex items-center underline"> {/* Added underline */}
                     Explore <ArrowRight className="ml-1 h-3 w-3" />
                   </Link>
                 </div>
               ))}
             </div>
 
+            {/* Divider line */}
+            <div className="border-t border-grey my-12"></div> {/* Added divider line */}
+
             {/* Price List */}
-            <div className="border p-8 mb-12">
+            <div className="border border-black p-8 mb-12"> {/* Added border-black */}
               <div className="grid grid-cols-3 gap-4">
                 <div>
                   <div className="flex justify-between mb-4">
@@ -196,13 +204,15 @@ export default function Home() {
             </div>
 
             <div className="flex justify-center">
-              <Button className="rounded-full px-8 bg-black text-white hover:bg-black/80">View All Services</Button>
+              <Button className="rounded-full px-8 bg-black text-white hover:bg-black/80 border border-black"> {/* Added border-black */}
+                View All Services
+              </Button>
             </div>
           </div>
         </section>
 
         {/* Bridal Makeup Section */}
-        <section className="py-16 bg-white">
+        <section className="py-0 bg-white">
           <div className="container mx-auto px-8">
             <div className="grid md:grid-cols-2 gap-10 items-center">
               <div className="space-y-6">
@@ -239,7 +249,7 @@ export default function Home() {
         </section>
 
         {/*Best Hair Solution Section */}
-        <section className="py-16 bg-white">
+        <section className="py-10 bg-white">
           <div className="container mx-auto px-8">
             <h2 className="text-3xl font-bold mb-10">Best Hair Solution Salon</h2>
             <p className="text-muted-foreground">
@@ -267,47 +277,47 @@ export default function Home() {
         </section>
 
         {/* Nails Art Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-8">
-            <div className="grid md:grid-cols-2 gap-10 items-center">
-              <div className="flex justify-center">
-                <div className="overflow-hidden w-full max-w-[400px]">
-                  <Image
-                    src="/assets/nail1.jpg"
-                    alt="Nail art"
-                    width={400}
-                    height={500}
-                    className="object-cover w-full"
-                  />
-                </div>
-              </div>
+        <section className="py-8 bg-gray-50">
+  <div className="container mx-auto px-8">
+    <div className="grid md:grid-cols-2 gap-10 items-center">
+      <div className="flex justify-center">
+        <div className="overflow-hidden w-full max-w-[300px]"> {/* Changed from 400px to 300px */}
+          <Image
+            src="/assets/nail1.jpg"
+            alt="Nail art"
+            width={300} 
+            height={375} 
+            className="object-cover w-full"
+          />
+        </div>
+      </div>
 
-              <div className="space-y-6">
-                <h2 className="text-3xl font-bold">Nails Art</h2>
-                <p className="text-gray-600">
-                  Elevate your manicure experience with our exquisite nail art services. Whether you're looking for
-                  minimalist elegance or bold, intricate designs, our talented nail artists bring creativity and precision
-                  to every stroke. Using high-quality products and the latest techniques, we transform your nails into
-                  stunning works of art that express your unique style.
-                </p>
-                <p className="text-gray-600">
-                  From classic French tips to vibrant, eye-catching patterns, our salon offers a wide range of designs to
-                  suit any occasion. Pamper yourself with a custom nail art session and leave with nails that are sure to
-                  turn heads! <span className="font-medium">Read More</span>
-                </p>
+      <div className="space-y-6">
+        <h2 className="text-3xl font-bold">Nails Art</h2>
+        <p className="text-gray-600">
+          Elevate your manicure experience with our exquisite nail art services. Whether you're looking for
+          minimalist elegance or bold, intricate designs, our talented nail artists bring creativity and precision
+          to every stroke. Using high-quality products and the latest techniques, we transform your nails into
+          stunning works of art that express your unique style.
+        </p>
+        <p className="text-gray-600">
+          From classic French tips to vibrant, eye-catching patterns, our salon offers a wide range of designs to
+          suit any occasion. Pamper yourself with a custom nail art session and leave with nails that are sure to
+          turn heads! <span className="font-medium">Read More</span>
+        </p>
 
-                <div className="pt-4">
-                  <Button className="rounded-full px-6 bg-black text-white hover:bg-black/80">
-                    Get Appointment For Nails <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <div className="pt-4">
+          <Button className="rounded-full px-6 bg-black text-white hover:bg-black/80">
+            Get Appointment For Nails <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
         {/* Blog Section */}
-        <section className="py-16 bg-white">
+        <section className="py-8 bg-white">
           <div className="container mx-auto px-8">
             <div className="mb-12">
               <h2 className="text-3xl font-bold">Our Blogs</h2>
@@ -406,102 +416,106 @@ export default function Home() {
               </button>
             </div>
 
-            {/* View All Blogs Button */}
+            {/* View All Blogs Button
             <div className="flex justify-center mt-10">
               <Button className="rounded-full px-8 bg-black text-white hover:bg-black/80">View All Blogs</Button>
-            </div>
+            </div> */}
           </div>
         </section>
       </main>
 
       {/* Footer */}
       <footer className="bg-[#727F85] text-white py-12">
-        <div className="container mx-auto px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Column 1: Brand Info */}
-            <div className="space-y-4">
-              <h1 className="text-2xl font-bold">GlamAuraStudio</h1>
-              <p className="text-white/90">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-              </p>
-              <div className="space-y-1">
-                <p className="font-medium">1234 Abc Address, Xyz</p>
-                <p className="font-medium">+1 (123) 111 - 3210</p>
-              </div>
-            </div>
+  <div className="container mx-auto px-8">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Column 1: Brand Info */}
+      <div className="space-y-4">
+        <h1 className="text-2xl font-bold">GlamAuraStudio</h1>
+        <p className="text-white/90">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+        <div className="space-y-1">
+          <p className="font-medium">1234 Abe Address, Xyz</p>
+          <p className="font-medium">+1 (123) 111 - 3210</p>
+        </div>
+      </div>
 
-            {/* Column 2: Links Grid */}
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <h3 className="text-lg font-semibold mb-3">Home</h3>
-                <ul className="space-y-2">
-                  <li><Link href="#" className="text-white/90 hover:text-white">About Us</Link></li>
-                  <li><Link href="#" className="text-white/90 hover:text-white">Beauty & Makeup</Link></li>
-                  <li><Link href="#" className="text-white/90 hover:text-white">Offers</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-3">Services</h3>
-                <ul className="space-y-2">
-                  <li><Link href="#" className="text-white/90 hover:text-white">Contact</Link></li>
-                  <li><Link href="#" className="text-white/90 hover:text-white">Discount</Link></li>
-                  <li><Link href="#" className="text-white/90 hover:text-white">Appointment</Link></li>
-                </ul>
-              </div>
-            </div>
+      {/* Column 2: Links Grid */}
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <h3 className="text-lg font-semibold mb-3">Home</h3>
+          <ul className="space-y-2">
+            <li><Link href="#" className="text-white/90 hover:text-white">About Us</Link></li>
+            <li><Link href="#" className="text-white/90 hover:text-white">Beauty & Makeup</Link></li>
+            <li><Link href="#" className="text-white/90 hover:text-white">Offers</Link></li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-lg font-semibold mb-3">Services</h3>
+          <ul className="space-y-2">
+            <li><Link href="#" className="text-white/90 hover:text-white">Contact</Link></li>
+            <li><Link href="#" className="text-white/90 hover:text-white">Discount</Link></li>
+            <li><Link href="#" className="text-white/90 hover:text-white">Appointment</Link></li>
+            <li><Link href="#" className="text-white/90 hover:text-white">FAQs</Link></li>
+          </ul>
+        </div>
+      </div>
 
-            {/* Column 3: Social Media */}
-            <div>
-              <h3 className="text-lg font-semibold mb-3">Join Our Social Media Community</h3>
-              <div className="flex flex-col space-y-4">
-                <Link href="#" className="flex items-center text-white/90 hover:text-white">
-                  <Image
-                    src="/assets/insta.png"
-                    alt="Instagram"
-                    width={20}
-                    height={20}
-                    className="w-5 h-5 mr-2"
-                  />
-                  Instagram
-                </Link>
-                <Link href="#" className="flex items-center text-white/90 hover:text-white">
-                  <Image
-                    src="/assets/fb.png"
-                    alt="Facebook"
-                    width={20}
-                    height={20}
-                    className="w-5 h-5 mr-2"
-                  />
-                  Facebook
-                </Link>
-                <Link href="#" className="flex items-center text-white/90 hover:text-white">
-                  <Image
-                    src="/assets/yt.png"
-                    alt="YouTube"
-                    width={20}
-                    height={20}
-                    className="w-5 h-5 mr-2"
-                  />
-                  YouTube
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom Links */}
-          <div className="mt-12 pt-6 border-t border-white/20">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-                <Link href="#" className="text-white/90 hover:text-white text-sm">Terms & Conditions</Link>
-                <Link href="#" className="text-white/90 hover:text-white text-sm">Privacy Policy</Link>
-              </div>
-              <p className="text-white/90 text-sm">
-                Copyright © 2025 GlamAuraStudio
-              </p>
-            </div>
+      {/* Column 3: Social Media - Adjusted spacing */}
+      <div className="space-y-4">
+        <h3 className="text-lg font-semibold">Join Our Social Media</h3>
+        <div className="space-y-2">
+          <p className="text-white/90">Community</p>
+          <div className="flex flex-col space-y-3">
+            <Link href="#" className="flex items-center text-white/90 hover:text-white">
+              <Image
+                src="/assets/insta.png"
+                alt="Instagram"
+                width={20}
+                height={20}
+                className="w-5 h-5 mr-2"
+              />
+              Instagram
+            </Link>
+            <Link href="#" className="flex items-center text-white/90 hover:text-white">
+              <Image
+                src="/assets/fb.png"
+                alt="Facebook"
+                width={20}
+                height={20}
+                className="w-5 h-5 mr-2"
+              />
+              Facebook
+            </Link>
+            <Link href="#" className="flex items-center text-white/90 hover:text-white">
+              <Image
+                src="/assets/yt.png"
+                alt="YouTube"
+                width={20}
+                height={20}
+                className="w-5 h-5 mr-2"
+              />
+              YouTube
+            </Link>
           </div>
         </div>
-      </footer>
+      </div>
+    </div>
+
+    {/* Bottom Links - Adjusted to match image */}
+    <div className="mt-12 pt-6 border-t border-white/20">
+      <div className="flex flex-col items-center gap-2 text-center">
+        <div className="flex flex-col md:flex-row gap-4">
+          <Link href="#" className="text-white/90 hover:text-white text-sm">Terms & Conditions</Link>
+          <Link href="#" className="text-white/90 hover:text-white text-sm">Privacy Policy</Link>
+        </div>
+        <p className="text-white/90 text-sm">
+          Copyright © 2025 GlamAuraStudio
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
     </div>
   )
 }
@@ -512,85 +526,47 @@ const serviceCards = [
     name: "MAKEUP",
     description: "Lorem ipsum dolor sit amet, consectetur",
     icon: (
-      <svg
-        width="40"
-        height="40"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M7 21h10" />
-        <path d="M12 21V11" />
-        <path d="M3.5 11h17" />
-        <path d="M5 11V7.5C5 6.67 5.67 6 6.5 6h11c.83 0 1.5.67 1.5 1.5V11" />
-        <rect x="8" y="3" width="8" height="3" rx="1" />
-        <path d="M18 11v2" />
-        <path d="M6 11v2" />
-      </svg>
+      <img
+        src="/assets/m-icon.png"
+        alt="Makeup Icon"
+        className="w-10 h-10 object-contain"
+      />
     ),
   },
   {
     name: "HAIRS",
     description: "Lorem ipsum dolor sit amet, consectetur",
     icon: (
-      <svg
-        width="40"
-        height="40"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M9 6c0 4-4.5 5-4.5 10 0 3 2 4 4.5 4s4.5-1 4.5-4c0-5-4.5-6-4.5-10" />
-        <path d="M15 6c0 4 4.5 5 4.5 10 0 3-2 4-4.5 4s-4.5-1-4.5-4c0-5 4.5-6 4.5-10" />
-      </svg>
+      <img
+        src="/assets/h-icon.png"
+        alt="Hair Icon"
+        className="w-10 h-10 object-contain"
+      />
     ),
   },
   {
     name: "BROW",
     description: "Lorem ipsum dolor sit amet, consectetur",
     icon: (
-      <svg
-        width="40"
-        height="40"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
-        <circle cx="12" cy="12" r="3" />
-      </svg>
+      <img
+        src="/assets/b-icon.png"
+        alt="Brow Icon"
+        className="w-10 h-10 object-contain"
+      />
     ),
   },
   {
     name: "NAILS",
     description: "Lorem ipsum dolor sit amet, consectetur",
     icon: (
-      <svg
-        width="40"
-        height="40"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M12 2a5 5 0 0 0-5 5v14a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5Z" />
-        <path d="M18 6a3 3 0 0 0-3 3v12a3 3 0 0 0 6 0V9a3 3 0 0 0-3-3Z" />
-        <path d="M6 6a3 3 0 0 1 3 3v12a3 3 0 0 1-6 0V9a3 3 0 0 1 3-3Z" />
-      </svg>
+      <img
+        src="/assets/n-icon.png"
+        alt="Nails Icon"
+        className="w-10 h-10 object-contain"
+      />
     ),
   },
-]
+];
 
 const vacationImages = [
   "/assets/hair2.png",
