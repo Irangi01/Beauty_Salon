@@ -14,126 +14,126 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero Section with integrated Navbar */}
         <section className="relative h-[500px] md:h-[600px] overflow-hidden">
-  <Image
-    src="/assets/Hero1.png"
-    alt="Beauty artist background"
-    fill
-    className="object-cover"
-    priority
-  />
-
-  {/* Navigation Bar */}
-  <div className="absolute top-0 w-full z-10">
-    <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
-      <div className="font-semibold text-xl text-white">GlamAuraStudio</div>
-      <nav className="hidden md:flex items-center space-x-6">
-        <Link href="#" className="text-sm font-medium text-white hover:text-white hover:underline">
-          Home
-        </Link>
-        <Link href="#" className="text-sm font-medium text-white hover:text-white hover:underline">
-          Services
-        </Link>
-        <Link href="#" className="text-sm font-medium text-white hover:text-white hover:underline">
-          About Us
-        </Link>
-        <Link href="#" className="text-sm font-medium text-white hover:text-white hover:underline">
-          Contact
-        </Link>
-      </nav>
-      <div className="relative group">
-        <button className="flex items-center text-white rounded-full border border-white/30 px-3 py-1 h-auto space-x-2">
-          <img
-            src="https://flagcdn.com/w20/au.png"
-            alt="Australian Flag"
-            className="w-5 h-3 object-cover"
+          <Image
+            src="/assets/Hero1.png"
+            alt="Beauty artist background"
+            fill
+            className="object-cover"
+            priority
           />
-          <span>ENG</span>
-          <ChevronDown className="h-3 w-3 opacity-50" />
-        </button>
-        <div className="absolute right-0 mt-2 w-40 origin-top-right bg-white/90 backdrop-blur-md rounded-md shadow-lg hidden group-hover:block">
-          <div className="py-1">
-            <a href="#" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-              <img
-                src="https://flagcdn.com/w20/us.png"
-                alt="USA Flag"
-                className="w-5 h-3 mr-2 object-cover"
-              />
-              English (US)
-            </a>
-            <a href="#" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-              <img
-                src="https://flagcdn.com/w20/fr.png"
-                alt="French Flag"
-                className="w-5 h-3 mr-2 object-cover"
-              />
-              Français
-            </a>
-            <a href="#" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-              <img
-                src="https://flagcdn.com/w20/es.png"
-                alt="Spanish Flag"
-                className="w-5 h-3 mr-2 object-cover"
-              />
-              Español
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  {/* Hero Content */}
-  <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent pt-16">
-    <div className="container mx-auto h-full flex flex-col justify-center px-4 md:px-8">
-      <div className="flex flex-col md:flex-row items-center md:items-start justify-between">
-        {/* Left content - Hero text */}
-        <div className="max-w-xl space-y-4 text-center md:text-left">
-          <h1 className="text-3xl md:text-5xl font-bold text-white">
-            Clear Focus, Brighter Tomorrow
-          </h1>
-          <p className="text-white/90 text-base md:text-lg">
-            Enhance your natural beauty with our professional makeup and beauty services. We specialize in creating
-            looks that make you feel confident and radiant.
-          </p>
-          <div className="flex justify-center md:justify-start items-center gap-4">
-            <Button className="rounded-full text-sm md:text-base">
-              <Play className="mr-2 h-4 w-4" /> Watch Video
-            </Button>
-          </div>
-          <div className="mt-6 md:mt-8 flex justify-center md:justify-start items-center gap-4">
-            <div className="flex -space-x-3">
-              {[1, 2, 3].map((i) => (
-                <div
-                  key={i}
-                  className="relative w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden border-2 border-white"
-                >
-                  <Image
-                    src={`/assets/2.png`}
-                    alt={`Customer ${i}`}
-                    fill
-                    className="object-cover"
+          {/* Navigation Bar */}
+          <div className="absolute top-0 w-full z-10">
+            <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
+              <div className="font-semibold text-xl text-white">GlamAuraStudio</div>
+              <nav className="hidden md:flex items-center space-x-6">
+                <Link href="#" className="text-sm font-medium text-white hover:text-white hover:underline">
+                  Home
+                </Link>
+                <Link href="#" className="text-sm font-medium text-white hover:text-white hover:underline">
+                  Services
+                </Link>
+                <Link href="#" className="text-sm font-medium text-white hover:text-white hover:underline">
+                  About Us
+                </Link>
+                <Link href="#" className="text-sm font-medium text-white hover:text-white hover:underline">
+                  Contact
+                </Link>
+              </nav>
+              <div className="relative group">
+                <button className="flex items-center text-white rounded-full border border-white/30 px-3 py-1 h-auto space-x-2">
+                  <img
+                    src="https://flagcdn.com/w20/au.png"
+                    alt="Australian Flag"
+                    className="w-5 h-3 object-cover"
                   />
+                  <span>ENG</span>
+                  <ChevronDown className="h-3 w-3 opacity-50" />
+                </button>
+                <div className="absolute right-0 mt-2 w-40 origin-top-right bg-white/90 backdrop-blur-md rounded-md shadow-lg hidden group-hover:block">
+                  <div className="py-1">
+                    <a href="#" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <img
+                        src="https://flagcdn.com/w20/us.png"
+                        alt="USA Flag"
+                        className="w-5 h-3 mr-2 object-cover"
+                      />
+                      English (US)
+                    </a>
+                    <a href="#" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <img
+                        src="https://flagcdn.com/w20/fr.png"
+                        alt="French Flag"
+                        className="w-5 h-3 mr-2 object-cover"
+                      />
+                      Français
+                    </a>
+                    <a href="#" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <img
+                        src="https://flagcdn.com/w20/es.png"
+                        alt="Spanish Flag"
+                        className="w-5 h-3 mr-2 object-cover"
+                      />
+                      Español
+                    </a>
+                  </div>
                 </div>
-              ))}
+              </div>
             </div>
-            <span className="text-white text-xs md:text-sm">Trusted by 2,000+ customers</span>
           </div>
-        </div>
 
-        {/* Right side - Quick Booking Card */}
-        <div className="mt-8 md:absolute md:right-10 md:bottom-20 md:mt-0 bg-white/10 backdrop-blur-lg p-4 md:p-6 border border-white/20 w-full md:max-w-xs shadow-lg">
-          <h3 className="text-lg md:text-xl font-bold text-white mb-3">Quick Booking</h3>
-          <p className="text-white/80 mb-4 md:mb-5 text-xs md:text-sm">
-            Get up to 30% discount on your first visit
-          </p>
-          <Button className="w-full bg-white text-gray-900 hover:bg-white/90 font-medium text-sm md:text-base">
-            Book Appointment
-          </Button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+          {/* Hero Content */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent pt-16">
+            <div className="container mx-auto h-full flex flex-col justify-center px-4 md:px-8">
+              <div className="flex flex-col md:flex-row items-center md:items-start justify-between">
+                {/* Left content - Hero text */}
+                <div className="max-w-xl space-y-4 text-center md:text-left">
+                  <h1 className="text-3xl md:text-5xl font-bold text-white">
+                    Clear Focus, Brighter Tomorrow
+                  </h1>
+                  <p className="text-white/90 text-base md:text-lg">
+                    Enhance your natural beauty with our professional makeup and beauty services. We specialize in creating
+                    looks that make you feel confident and radiant.
+                  </p>
+                  <div className="flex justify-center md:justify-start items-center gap-4">
+                    <Button className="rounded-full text-sm md:text-base">
+                      <Play className="mr-2 h-4 w-4" /> Watch Video
+                    </Button>
+                  </div>
+                  <div className="mt-6 md:mt-8 flex justify-center md:justify-start items-center gap-4">
+                    <div className="flex -space-x-3">
+                      {[1, 2, 3].map((i) => (
+                        <div
+                          key={i}
+                          className="relative w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden border-2 border-white"
+                        >
+                          <Image
+                            src={`/assets/2.png`}
+                            alt={`Customer ${i}`}
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                    <span className="text-white text-xs md:text-sm">Trusted by 2,000+ customers</span>
+                  </div>
+                </div>
+
+                {/* Right side - Quick Booking Card */}
+                <div className="mt-8 md:absolute md:right-10 md:bottom-20 md:mt-0 bg-white/10 backdrop-blur-lg p-4 md:p-6 border border-white/20 w-full md:max-w-xs shadow-lg">
+                  <h3 className="text-lg md:text-xl font-bold text-white mb-3">Quick Booking</h3>
+                  <p className="text-white/80 mb-4 md:mb-5 text-xs md:text-sm">
+                    Get up to 30% discount on your first visit
+                  </p>
+                  <Button className="w-full bg-white text-gray-900 hover:bg-white/90 font-medium text-sm md:text-base">
+                    Book Appointment
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
 
 
@@ -278,43 +278,43 @@ export default function Home() {
 
         {/* Nails Art Section */}
         <section className="py-8 bg-gray-50">
-  <div className="container mx-auto px-8">
-    <div className="grid md:grid-cols-2 gap-10 items-center">
-      <div className="flex justify-center">
-        <div className="overflow-hidden w-full max-w-[300px]"> {/* Changed from 400px to 300px */}
-          <Image
-            src="/assets/nail1.jpg"
-            alt="Nail art"
-            width={300} 
-            height={375} 
-            className="object-cover w-full"
-          />
-        </div>
-      </div>
+          <div className="container mx-auto px-8">
+            <div className="grid md:grid-cols-2 gap-10 items-center">
+              <div className="flex justify-center">
+                <div className="overflow-hidden w-full max-w-[300px]"> {/* Changed from 400px to 300px */}
+                  <Image
+                    src="/assets/nail1.jpg"
+                    alt="Nail art"
+                    width={300}
+                    height={375}
+                    className="object-cover w-full"
+                  />
+                </div>
+              </div>
 
-      <div className="space-y-6">
-        <h2 className="text-3xl font-bold">Nails Art</h2>
-        <p className="text-gray-600">
-          Elevate your manicure experience with our exquisite nail art services. Whether you're looking for
-          minimalist elegance or bold, intricate designs, our talented nail artists bring creativity and precision
-          to every stroke. Using high-quality products and the latest techniques, we transform your nails into
-          stunning works of art that express your unique style.
-        </p>
-        <p className="text-gray-600">
-          From classic French tips to vibrant, eye-catching patterns, our salon offers a wide range of designs to
-          suit any occasion. Pamper yourself with a custom nail art session and leave with nails that are sure to
-          turn heads! <span className="font-medium">Read More</span>
-        </p>
+              <div className="space-y-6">
+                <h2 className="text-3xl font-bold">Nails Art</h2>
+                <p className="text-gray-600">
+                  Elevate your manicure experience with our exquisite nail art services. Whether you're looking for
+                  minimalist elegance or bold, intricate designs, our talented nail artists bring creativity and precision
+                  to every stroke. Using high-quality products and the latest techniques, we transform your nails into
+                  stunning works of art that express your unique style.
+                </p>
+                <p className="text-gray-600">
+                  From classic French tips to vibrant, eye-catching patterns, our salon offers a wide range of designs to
+                  suit any occasion. Pamper yourself with a custom nail art session and leave with nails that are sure to
+                  turn heads! <span className="font-medium">Read More</span>
+                </p>
 
-        <div className="pt-4">
-          <Button className="rounded-full px-6 bg-black text-white hover:bg-black/80">
-            Get Appointment For Nails <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+                <div className="pt-4">
+                  <Button className="rounded-full px-6 bg-black text-white hover:bg-black/80">
+                    Get Appointment For Nails <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Blog Section */}
         <section className="py-8 bg-white">
@@ -428,7 +428,7 @@ export default function Home() {
       <footer className="bg-[#727F85] text-white py-12">
   <div className="container mx-auto px-8">
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {/* Column 1: Brand Info */}
+      {/* Column 1: Brand Info - stays on left */}
       <div className="space-y-4">
         <h1 className="text-2xl font-bold">GlamAuraStudio</h1>
         <p className="text-white/90">
@@ -440,8 +440,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Column 2: Links Grid */}
-      <div className="grid grid-cols-2 gap-4">
+      {/* Column 2: Links Grid - pushed right with margin */}
+      <div className="grid grid-cols-2 gap-4 md:ml-8"> {/* Added md:ml-8 */}
         <div>
           <h3 className="text-lg font-semibold mb-3">Home</h3>
           <ul className="space-y-2">
@@ -461,8 +461,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Column 3: Social Media - Adjusted spacing */}
-      <div className="space-y-4">
+      {/* Column 3: Social Media - pushed further right */}
+      <div className="space-y-4 md:ml-12"> {/* Added md:ml-12 */}
         <h3 className="text-lg font-semibold">Join Our Social Media</h3>
         <div className="space-y-2">
           <p className="text-white/90">Community</p>
@@ -502,7 +502,7 @@ export default function Home() {
       </div>
     </div>
 
-    {/* Bottom Links - Adjusted to match image */}
+    {/* Bottom Links */}
     <div className="mt-12 pt-6 border-t border-white/20">
       <div className="flex flex-col items-center gap-2 text-center">
         <div className="flex flex-col md:flex-row gap-4">
