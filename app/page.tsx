@@ -72,7 +72,7 @@ export default function Home() {
       {/* Header*/}
       <main className="flex-1">
         {/* Hero Section with integrated Navbar */}
-        <section className="relative h-[500px] md:h-[600px] overflow-hidden">
+        <section className="relative h-screen overflow-hidden">
           <Image
             src="/assets/Hero1.png"
             alt="Beauty artist background"
@@ -86,24 +86,24 @@ export default function Home() {
             <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
               <div className="font-semibold text-xl text-white">GlamAuraStudio</div>
 
-              {/* Desktop Navigation - hidden on mobile */}
+              {/* Desktop Navigation */}
               <nav className="hidden md:flex items-center space-x-6">
-                <Link href="#" className="text-sm font-medium text-white hover:text-white hover:underline">Home</Link>
-                <Link href="#" className="text-sm font-medium text-white hover:text-white hover:underline">Services</Link>
-                <Link href="#" className="text-sm font-medium text-white hover:text-white hover:underline">About Us</Link>
-                <Link href="#" className="text-sm font-medium text-white hover:text-white hover:underline">Contact</Link>
+                <Link href="#" className="text-sm font-medium text-white hover:underline">Home</Link>
+                <Link href="#" className="text-sm font-medium text-white hover:underline">Services</Link>
+                <Link href="#" className="text-sm font-medium text-white hover:underline">About Us</Link>
+                <Link href="#" className="text-sm font-medium text-white hover:underline">Contact</Link>
               </nav>
 
-              {/* Mobile Menu Button - visible only on mobile */}
-              <div className="md:hidden flex items-center space-x-4">
+              {/* Mobile Menu Button - moved to top-right corner */}
+              <div className="md:hidden absolute top-4 right-4">
                 <button className="text-white focus:outline-none" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
                   <Menu className="h-6 w-6" />
                 </button>
               </div>
 
-              {/* Language Selector */}
-              <div className="relative group">
-                <button className="flex items-center text-white rounded-full border border-white/30 px-3 py-1 h-auto space-x-2">
+              {/* Language Selector - Hidden on mobile */}
+              <div className="relative group hidden md:block">
+                <button className="flex items-center text-white rounded-full border border-white/30 px-3 py-1">
                   <img src="https://flagcdn.com/w20/au.png" alt="Australian Flag" className="w-5 h-3 object-cover" />
                   <span>ENG</span>
                   <ChevronDown className="h-3 w-3 opacity-50" />
@@ -111,63 +111,53 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Mobile Menu - appears when menu button is clicked */}
+            {/* Mobile Menu */}
             {isMobileMenuOpen && (
-              <div className="md:hidden bg-tranparent/90 backdrop-blur-md w-full py-4 px-4">
+              <div className="md:hidden bg-transparent/90 backdrop-blur-md w-full py-4 px-4">
                 <nav className="flex flex-col space-y-4">
-                  <Link href="#" className="text-sm font-medium text-white hover:text-white hover:underline" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
-                  <Link href="#" className="text-sm font-medium text-white hover:text-white hover:underline" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
-                  <Link href="#" className="text-sm font-medium text-white hover:text-white hover:underline" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
-                  <Link href="#" className="text-sm font-medium text-white hover:text-white hover:underline" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
+                  <Link href="#" className="text-sm font-medium text-white hover:underline" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
+                  <Link href="#" className="text-sm font-medium text-white hover:underline" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
+                  <Link href="#" className="text-sm font-medium text-white hover:underline" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
+                  <Link href="#" className="text-sm font-medium text-white hover:underline" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
                 </nav>
               </div>
             )}
           </div>
 
-          {/* Hero Content - Adjusted for all screens without changing layout */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent pt-16">
+          {/* Hero Content - Aligned to Left */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent pt-4">
             <div className="container mx-auto h-full flex flex-col justify-center px-4 md:px-8">
-              <div className="flex flex-col md:flex-row items-center md:items-start justify-between">
-                {/* Left content - Hero text (with responsive sizing) */}
-                <div className="max-w-[90vw] md:max-w-xl space-y-2 md:space-y-4 text-center md:text-left">
-                  <h1 className="text-[1.5rem] xs:text-2xl sm:text-3xl md:text-5xl font-bold text-white leading-tight">
+              <div className="flex flex-col md:flex-row items-start justify-between">
+                {/* Left Content - Hero text */}
+                <div className="max-w-[90vw] md:max-w-xl space-y-4 text-left">
+                  <h1 className="text-3xl sm:text-4xl md:text-6xl font-medium text-white leading-tight">
                     Clear Focus, Brighter Tomorrow
                   </h1>
-                  <p className="text-white/90 text-xs xs:text-sm sm:text-base md:text-lg">
-                    Enhance your natural beauty with our professional makeup and beauty services. We specialize in creating looks that make you feel confident and radiant.
+                  <p className="text-white/90 text-sm sm:text-base md:text-lg">
+                    Enhance your natural beauty with our professional makeup and beauty services.
                   </p>
-                  <div className="flex justify-center md:justify-start items-center gap-2 sm:gap-4">
-                    <Button className="rounded-full text-xs xs:text-sm md:text-base px-3 xs:px-4 py-1">
-                      <Play className="mr-1 xs:mr-2 h-3 w-3 xs:h-4 xs:w-4" /> Watch Video
-                    </Button>
-                  </div>
-                  <div className="mt-2 xs:mt-4 sm:mt-6 md:mt-8 flex justify-center md:justify-start items-center gap-2 sm:gap-4">
-                    <div className="flex -space-x-2 xs:-space-x-3">
+                  <div className="flex justify-start items-center gap-4">
+    <Button className="rounded-full px-6 py-3 md:px-8 md:py-4 text-sm md:text-base">
+      <Play className="mr-2 h-5 w-5 md:h-6 md:w-6" /> Watch Video
+    </Button>
+  </div>
+                  <div className="md:absolute md:left-10 md:bottom-20 flex items-center gap-4">
+                    <div className="flex -space-x-3 md:-space-x-4">
                       {[1, 2, 3].map((i) => (
-                        <div
-                          key={i}
-                          className="relative w-6 h-6 xs:w-8 xs:h-8 md:w-10 md:h-10 rounded-full overflow-hidden border border-white"
-                        >
-                          <Image
-                            src={`/assets/2.png`}
-                            alt={`Customer ${i}`}
-                            fill
-                            className="object-cover"
-                          />
+                        <div key={i} className="relative w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-white">
+                          <Image src={`/assets/2.png`} alt={`Customer ${i}`} fill className="object-cover" />
                         </div>
                       ))}
                     </div>
-                    <span className="text-white text-[0.65rem] xs:text-xs md:text-sm">Trusted by 2,000+ customers</span>
+                    <span className="text-white text-base md:text-lg font-medium">Trusted by 2,000+ customers</span>
                   </div>
                 </div>
 
-                {/* Right side - Quick Booking Card (with responsive sizing) */}
-                <div className="mt-4 xs:mt-6 sm:mt-8 md:absolute md:right-10 md:bottom-20 md:mt-0 bg-white/10 backdrop-blur-lg p-3 xs:p-4 sm:p-6 border border-white/20 w-full xs:w-[90%] sm:w-[80%] md:w-full md:max-w-xs shadow-lg">
-                  <h3 className="text-base xs:text-lg sm:text-xl font-bold text-white mb-2 xs:mb-3">Quick Booking</h3>
-                  <p className="text-white/80 text-xs xs:text-sm mb-3 xs:mb-4 sm:mb-5">
-                    Get up to 30% discount on your first visit
-                  </p>
-                  <Button className="w-full bg-white text-gray-900 hover:bg-white/90 font-medium text-xs xs:text-sm sm:text-base">
+                {/* Right Side - Booking Card */}
+                <div className="mt-8 md:absolute md:right-10 md:bottom-20 bg-white/10 backdrop-blur-lg p-4 border border-white/20 w-full md:max-w-xs shadow-lg">
+                  <h3 className="text-lg font-bold text-white mb-3">Quick Booking</h3>
+                  <p className="text-white/80 text-sm mb-4">Get up to 30% discount on your first visit</p>
+                  <Button className="w-full bg-white text-gray-900 hover:bg-white/90 font-medium text-sm">
                     Book Appointment
                   </Button>
                 </div>
@@ -175,6 +165,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
 
 
 
@@ -208,41 +199,41 @@ export default function Home() {
 
             {/* Price List */}
             <div className="border border-black p-8 mb-12">
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-    <div>
-      <div className="flex justify-between mb-4">
-        <span className="font-medium">NAIL BUFER</span>
-        <span className="font-medium">$15</span>
-      </div>
-      <div className="flex justify-between">
-        <span className="font-medium">SUPER DELUXE</span>
-        <span className="font-medium">$15</span>
-      </div>
-    </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div>
+                  <div className="flex justify-between mb-4">
+                    <span className="font-medium">NAIL BUFER</span>
+                    <span className="font-medium">$15</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium">SUPER DELUXE</span>
+                    <span className="font-medium">$15</span>
+                  </div>
+                </div>
 
-    <div>
-      <div className="flex justify-between mb-4">
-        <span className="font-medium">NAIL PAINT</span>
-        <span className="font-medium">$15</span>
-      </div>
-      <div className="flex justify-between">
-        <span className="font-medium">CHOCLATE SPA</span>
-        <span className="font-medium">$15</span>
-      </div>
-    </div>
+                <div>
+                  <div className="flex justify-between mb-4">
+                    <span className="font-medium">NAIL PAINT</span>
+                    <span className="font-medium">$15</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium">CHOCLATE SPA</span>
+                    <span className="font-medium">$15</span>
+                  </div>
+                </div>
 
-    <div>
-      <div className="flex justify-between mb-4">
-        <span className="font-medium">DELUXE</span>
-        <span className="font-medium">$15</span>
-      </div>
-      <div className="flex justify-between">
-        <span className="font-medium">NATURES SPA</span>
-        <span className="font-medium">$15</span>
-      </div>
-    </div>
-  </div>
-</div>
+                <div>
+                  <div className="flex justify-between mb-4">
+                    <span className="font-medium">DELUXE</span>
+                    <span className="font-medium">$15</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium">NATURES SPA</span>
+                    <span className="font-medium">$15</span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div className="flex justify-center">
               <Button className="rounded-full px-8 bg-black text-white hover:bg-black/80 border border-black"> {/* Added border-black */}
