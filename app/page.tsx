@@ -336,7 +336,7 @@ export default function Home() {
           <div className="container mx-auto px-2">
             <h2 className="text-3xl font-bold mb-10">Best Hair Solution Salon</h2>
             <p className="text-muted-foreground">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
             </p>
             <br></br>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -361,137 +361,137 @@ export default function Home() {
 
         {/* Nails Art Section */}
         <section className="py-8 bg-gray-50">
-  <div className="container mx-auto px-8">
-    <div className="grid md:grid-cols-2 gap-10 items-center">
-      <div className="flex justify-center">
-        <div className="overflow-hidden w-full max-w-[450px]"> {/* Increased from 300px to 450px */}
-          <Image
-            src="/assets/nail1.jpg"
-            alt="Nail art"
-            width={450}
-            height={560}
-            className="object-cover w-full"
-          />
-        </div>
-      </div>
-
-      <div className="space-y-6">
-        <h2 className="text-3xl font-bold">Nails Art</h2>
-        <p className="text-gray-600">
-          Elevate your manicure experience with our exquisite nail art services. Whether you're looking for
-          minimalist elegance or bold, intricate designs, our talented nail artists bring creativity and precision
-          to every stroke. Using high-quality products and the latest techniques, we transform your nails into
-          stunning works of art that express your unique style.
-        </p>
-        <p className="text-gray-600">
-          From classic French tips to vibrant, eye-catching patterns, our salon offers a wide range of designs to
-          suit any occasion. Pamper yourself with a custom nail art session and leave with nails that are sure to
-          turn heads! <span className="font-medium">Read More</span>
-        </p>
-
-        <div className="pt-4">
-          <Button className="rounded-full px-6 py-2.5 bg-black text-white hover:bg-black/80 flex items-center">
-            Get Appointment For Nails
-            <div className="ml-2 bg-white rounded-full p-1.5">
-              <ArrowRight className="h-3.5 w-3.5 text-black" />
-            </div>
-          </Button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-        {/* Blog Section */}
-        <section className="py-8 bg-white">
           <div className="container mx-auto px-8">
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold">Our Blogs</h2>
-              <p className="text-gray-600 mt-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-              </p>
-            </div>
-
-            <div className="relative max-w-5xl mx-auto">
-              {/* Blog Gallery with overlapping images */}
-              <div className="flex justify-center items-center relative h-[450px]">
-                {/* Left image 1 - furthest left */}
-                <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 h-[280px] w-[130px] overflow-hidden">
-                  <Link href="/blog/beauty-tips-1" className="block h-full hover:scale-105 transition-transform">
-                    <Image
-                      src="/assets/blog2.png"
-                      alt="Beauty blog 1"
-                      width={130}
-                      height={280}
-                      className="object-cover h-full w-full"
-                    />
-                  </Link>
-                </div>
-
-                {/* Left image 2 */}
-                <div className="absolute left-[110px] top-1/2 -translate-y-1/2 z-20 h-[330px] w-[180px] overflow-hidden">
-                  <Link href="/blog/beauty-tips-2" className="block h-full hover:scale-105 transition-transform">
-                    <Image
-                      src="/assets/blog3.png"
-                      alt="Beauty blog 2"
-                      width={180}
-                      height={330}
-                      className="object-cover h-full w-full"
-                    />
-                  </Link>
-                </div>
-
-                {/* Center featured image */}
-                <div className="absolute left-1/2 -translate-x-1/2 z-30">
-  <Link href="/blog/bridal-makeup-trends-2025" className="block group">
-    <div className="overflow-hidden shadow-lg">
-      <div className="overflow-hidden">
-        <Image
-          src="/assets/blog1.png"
-          alt="Bridal makeup trends"
-          width={300}  
-          height={300} 
-          className="object-contain group-hover:scale-105 transition-transform"
-        />
-      </div>
-    </div>
-  </Link>
-</div>
-
-                {/* Right image 1 */}
-                <div className="absolute right-[110px] top-1/2 -translate-y-1/2 z-20 h-[330px] w-[180px] overflow-hidden">
-                  <Link href="/blog/beauty-tips-3" className="block h-full hover:scale-105 transition-transform">
-                    <Image
-                      src="/assets/blog4.png"
-                      alt="Beauty blog 3"
-                      width={180}
-                      height={330}
-                      className="object-cover h-full w-full"
-                    />
-                  </Link>
-                </div>
-
-                {/* Right image 2 - furthest right */}
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10 h-[280px] w-[130px] overflow-hidden">
-                  <Link href="/blog/beauty-tips-4" className="block h-full hover:scale-105 transition-transform">
-                    <Image
-                      src="/assets/blog5.png"
-                      alt="Beauty blog 4"
-                      width={130}
-                      height={280}
-                      className="object-cover h-full w-full"
-                    />
-                  </Link>
+            <div className="grid md:grid-cols-2 gap-10 items-center">
+              <div className="flex justify-center">
+                <div className="overflow-hidden w-full max-w-[450px]"> {/* Increased from 300px to 450px */}
+                  <Image
+                    src="/assets/nail1.jpg"
+                    alt="Nail art"
+                    width={450}
+                    height={560}
+                    className="object-cover w-full"
+                  />
                 </div>
               </div>
 
-              {/* Navigation button */}
-              <button className="absolute right-0 top-1/2 -translate-y-1/2 z-40 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-colors">
-                <ChevronRight className="h-6 w-6" />
-              </button>
+              <div className="space-y-6">
+                <h2 className="text-3xl font-bold">Nails Art</h2>
+                <p className="text-gray-600">
+                  Elevate your manicure experience with our exquisite nail art services. Whether you're looking for
+                  minimalist elegance or bold, intricate designs, our talented nail artists bring creativity and precision
+                  to every stroke. Using high-quality products and the latest techniques, we transform your nails into
+                  stunning works of art that express your unique style.
+                </p>
+                <p className="text-gray-600">
+                  From classic French tips to vibrant, eye-catching patterns, our salon offers a wide range of designs to
+                  suit any occasion. Pamper yourself with a custom nail art session and leave with nails that are sure to
+                  turn heads! <span className="font-medium">Read More</span>
+                </p>
+
+                <div className="pt-4">
+                  <Button className="rounded-full px-6 py-2.5 bg-black text-white hover:bg-black/80 flex items-center">
+                    Get Appointment For Nails
+                    <div className="ml-2 bg-white rounded-full p-1.5">
+                      <ArrowRight className="h-3.5 w-3.5 text-black" />
+                    </div>
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
+
+        {/* Blog Section */}
+        <section className="py-8 bg-white">
+  <div className="container mx-auto px-8">
+    <div className="mb-12">
+      <h2 className="text-3xl font-bold">Our Blogs</h2>
+      <p className="text-gray-600 mt-2">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+      </p>
+    </div>
+
+    <div className="relative max-w-5xl mx-auto">
+      {/* Blog Gallery with overlapping images */}
+      <div className="flex justify-center items-center relative h-[450px]">
+        {/* Left image 1 - furthest left */}
+        <div className="absolute left-[50px] top-1/2 -translate-y-1/2 z-10 h-[280px] w-[130px] overflow-hidden">
+          <Link href="/blog/beauty-tips-1" className="block h-full hover:scale-105 transition-transform">
+            <Image
+              src="/assets/blog2.png"
+              alt="Beauty blog 1"
+              width={130}
+              height={280}
+              className="object-cover h-full w-full"
+            />
+          </Link>
+        </div>
+
+        {/* Left image 2 */}
+        <div className="absolute left-[180px] top-1/2 -translate-y-1/2 z-20 h-[330px] w-[180px] overflow-hidden">
+          <Link href="/blog/beauty-tips-2" className="block h-full hover:scale-105 transition-transform">
+            <Image
+              src="/assets/blog3.png"
+              alt="Beauty blog 2"
+              width={180}
+              height={330}
+              className="object-cover h-full w-full"
+            />
+          </Link>
+        </div>
+
+        {/* Center featured image */}
+        <div className="absolute left-1/2 -translate-x-1/2 z-30">
+          <Link href="/blog/bridal-makeup-trends-2025" className="block group">
+            <div className="overflow-hidden shadow-lg">
+              <div className="overflow-hidden">
+                <Image
+                  src="/assets/blog1.png"
+                  alt="Bridal makeup trends"
+                  width={300}
+                  height={300}
+                  className="object-contain group-hover:scale-105 transition-transform"
+                />
+              </div>
+            </div>
+          </Link>
+        </div>
+
+        {/* Right image 1 */}
+        <div className="absolute right-[180px] top-1/2 -translate-y-1/2 z-20 h-[330px] w-[180px] overflow-hidden">
+          <Link href="/blog/beauty-tips-3" className="block h-full hover:scale-105 transition-transform">
+            <Image
+              src="/assets/blog4.png"
+              alt="Beauty blog 3"
+              width={180}
+              height={330}
+              className="object-cover h-full w-full"
+            />
+          </Link>
+        </div>
+
+        {/* Right image 2 - furthest right */}
+        <div className="absolute right-[50px] top-1/2 -translate-y-1/2 z-10 h-[280px] w-[130px] overflow-hidden">
+          <Link href="/blog/beauty-tips-4" className="block h-full hover:scale-105 transition-transform">
+            <Image
+              src="/assets/blog5.png"
+              alt="Beauty blog 4"
+              width={130}
+              height={280}
+              className="object-cover h-full w-full"
+            />
+          </Link>
+        </div>
+      </div>
+
+      {/* Navigation button */}
+      <button className="absolute right-0 top-1/2 -translate-y-1/2 z-40 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-colors">
+        <ChevronRight className="h-6 w-6" />
+      </button>
+    </div>
+  </div>
+</section>
       </main>
 
       {/* Footer */}
