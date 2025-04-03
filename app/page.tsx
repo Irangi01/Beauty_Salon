@@ -414,9 +414,9 @@ export default function Home() {
 
     <div className="relative max-w-5xl mx-auto">
       {/* Blog Gallery with overlapping images */}
-      <div className="flex justify-center items-center relative h-[450px]">
+      <div className="flex justify-center items-center relative h-[450px] max-md:h-[280px]">
         {/* Left image 1 - furthest left */}
-        <div className="absolute left-[50px] top-1/2 -translate-y-1/2 z-10 h-[280px] w-[130px] overflow-hidden">
+        <div className="absolute left-[50px] top-1/2 -translate-y-1/2 z-10 h-[280px] w-[130px] overflow-hidden max-md:left-[10px] max-md:h-[160px] max-md:w-[70px]">
           <Link href="/blog/beauty-tips-1" className="block h-full hover:scale-105 transition-transform">
             <Image
               src="/assets/blog2.png"
@@ -429,7 +429,7 @@ export default function Home() {
         </div>
 
         {/* Left image 2 */}
-        <div className="absolute left-[180px] top-1/2 -translate-y-1/2 z-20 h-[330px] w-[180px] overflow-hidden">
+        <div className="absolute left-[180px] top-1/2 -translate-y-1/2 z-20 h-[330px] w-[180px] overflow-hidden max-md:left-[50px] max-md:h-[180px] max-md:w-[90px]">
           <Link href="/blog/beauty-tips-2" className="block h-full hover:scale-105 transition-transform">
             <Image
               src="/assets/blog3.png"
@@ -441,8 +441,8 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* Center featured image */}
-        <div className="absolute left-1/2 -translate-x-1/2 z-30">
+        {/* Center featured image - Made larger in mobile */}
+        <div className="absolute left-1/2 -translate-x-1/2 z-30 max-md:w-[180px]">
           <Link href="/blog/bridal-makeup-trends-2025" className="block group">
             <div className="overflow-hidden shadow-lg">
               <div className="overflow-hidden">
@@ -459,7 +459,7 @@ export default function Home() {
         </div>
 
         {/* Right image 1 */}
-        <div className="absolute right-[180px] top-1/2 -translate-y-1/2 z-20 h-[330px] w-[180px] overflow-hidden">
+        <div className="absolute right-[180px] top-1/2 -translate-y-1/2 z-20 h-[330px] w-[180px] overflow-hidden max-md:right-[50px] max-md:h-[180px] max-md:w-[90px]">
           <Link href="/blog/beauty-tips-3" className="block h-full hover:scale-105 transition-transform">
             <Image
               src="/assets/blog4.png"
@@ -472,7 +472,7 @@ export default function Home() {
         </div>
 
         {/* Right image 2 - furthest right */}
-        <div className="absolute right-[50px] top-1/2 -translate-y-1/2 z-10 h-[280px] w-[130px] overflow-hidden">
+        <div className="absolute right-[50px] top-1/2 -translate-y-1/2 z-10 h-[280px] w-[130px] overflow-hidden max-md:right-[10px] max-md:h-[160px] max-md:w-[70px]">
           <Link href="/blog/beauty-tips-4" className="block h-full hover:scale-105 transition-transform">
             <Image
               src="/assets/blog5.png"
@@ -486,8 +486,8 @@ export default function Home() {
       </div>
 
       {/* Navigation button */}
-      <button className="absolute right-0 top-1/2 -translate-y-1/2 z-40 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-colors">
-        <ChevronRight className="h-6 w-6" />
+      <button className="absolute right-0 top-1/2 -translate-y-1/2 z-40 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-colors max-md:p-1">
+        <ChevronRight className="h-6 w-6 max-md:h-4 max-md:w-4" />
       </button>
     </div>
   </div>
@@ -574,16 +574,16 @@ export default function Home() {
 
           {/* Bottom Links */}
           <div className="mt-12 pt-6 border-t border-white/20">
-  <div className="flex flex-col items-center">
-    <div className="flex flex-wrap justify-center items-center gap-4 text-sm text-white/90">
-      <Link href="#" className="hover:text-white">Terms & Conditions</Link>
-      <span>|</span>
-      <Link href="#" className="hover:text-white">Privacy Policy</Link>
-      <span>|</span>
-      <span>Copyright © 2025 GlamAuraStudio</span>
-    </div>
-  </div>
-</div>
+            <div className="flex flex-col items-center">
+              <div className="flex flex-wrap justify-center items-center gap-4 text-sm text-white/90">
+                <Link href="#" className="hover:text-white">Terms & Conditions</Link>
+                <span>|</span>
+                <Link href="#" className="hover:text-white">Privacy Policy</Link>
+                <span>|</span>
+                <span>Copyright © 2025 GlamAuraStudio</span>
+              </div>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
