@@ -5,6 +5,7 @@ import { Menu, Play, ArrowRight, ChevronRight, Calendar } from "lucide-react"
 import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from "@/components/ui/button"
+
 // import { Card, CardContent } from "@/components/ui/card"
 // import { Separator } from "@/components/ui/separator"
 
@@ -73,105 +74,147 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero Section with integrated Navbar */}
         <section className="relative h-screen overflow-hidden">
-  <Image
-    src="/assets/Hero1.png"
-    alt="Beauty artist background"
-    fill
-    className="object-cover"
-    priority
-  />
+          <Image src="/assets/Hero1.png" alt="Beauty artist background" fill className="object-cover" priority />
 
-  {/* Navigation Bar */}
-  <div className="absolute top-0 w-full z-10">
-    <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
-      <div className="font-semibold text-xl text-white">GlamAuraStudio</div>
+          {/* Navigation Bar */}
+          <div className="absolute top-0 w-full z-10">
+            <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
+              <div className="font-semibold text-xl text-white">GlamAuraStudio</div>
 
-      {/* Desktop Navigation */}
-      <nav className="hidden md:flex items-center space-x-6">
-        <Link href="#" className="text-sm font-medium text-white hover:underline">Home</Link>
-        <Link href="#" className="text-sm font-medium text-white hover:underline">Services</Link>
-        <Link href="#" className="text-sm font-medium text-white hover:underline">About Us</Link>
-        <Link href="#" className="text-sm font-medium text-white hover:underline">Contact</Link>
-      </nav>
+              {/* Desktop Navigation */}
+              <nav className="hidden md:flex items-center space-x-6">
+                <Link href="#" className="text-sm font-medium text-white hover:underline">
+                  Home
+                </Link>
+                <Link href="#" className="text-sm font-medium text-white hover:underline">
+                  Services
+                </Link>
+                <Link href="#" className="text-sm font-medium text-white hover:underline">
+                  About Us
+                </Link>
+                <Link href="#" className="text-sm font-medium text-white hover:underline">
+                  Contact
+                </Link>
+              </nav>
 
-      {/* Mobile Menu Button - moved to top-right corner */}
-      <div className="md:hidden absolute top-4 right-4">
-        <button className="text-white focus:outline-none" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          <Menu className="h-6 w-6" />
-        </button>
-      </div>
-
-      {/* Language Selector - Hidden on mobile */}
-      <div className="relative group hidden md:block">
-        <button className="flex items-center text-white rounded-full border border-white/30 px-3 py-1">
-          <img src="https://flagcdn.com/w20/au.png" alt="Australian Flag" className="w-5 h-3 object-cover" />
-          <span>ENG</span>
-          <ChevronDown className="h-3 w-3 opacity-50" />
-        </button>
-      </div>
-    </div>
-
-    {/* Mobile Menu */}
-    {isMobileMenuOpen && (
-      <div className="md:hidden bg-transparent/90 backdrop-blur-md w-full py-4 px-4">
-        <nav className="flex flex-col space-y-4">
-          <Link href="#" className="text-sm font-medium text-white hover:underline" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
-          <Link href="#" className="text-sm font-medium text-white hover:underline" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
-          <Link href="#" className="text-sm font-medium text-white hover:underline" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
-          <Link href="#" className="text-sm font-medium text-white hover:underline" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
-        </nav>
-      </div>
-    )}
-  </div>
-
-  {/* Hero Content - Modified for mobile */}
-  <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent pt-4">
-    <div className="container mx-auto h-full flex flex-col justify-between px-4 md:px-8 pb-8 md:pb-0">
-      
-      {/* Text Content - Bigger on mobile and moved down */}
-      <div className="mt-32 md:mt-0 md:flex md:flex-col md:justify-center md:h-full">
-        <div className="max-w-[90vw] md:max-w-xl space-y-6 md:space-y-4 text-left">
-          <h1 className="text-5xl sm:text-6xl md:text-6xl font-medium text-white leading-tight">
-            Clear Focus, Brighter Tomorrow
-          </h1>
-          <p className="text-white/90 text-xl sm:text-2xl md:text-lg">
-            Enhance your natural beauty with our professional makeup and beauty services.
-          </p>
-          <div className="flex justify-start items-center gap-4">
-            <Button className="rounded-full px-6 py-3 md:px-8 md:py-4 text-lg md:text-base">
-              <Play className="mr-2 h-6 w-6 md:h-6 md:w-6" /> Watch Video
-            </Button>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Section - Customers and Booking Card */}
-      <div className="flex flex-col-reverse md:flex-row justify-between items-end md:items-center">
-        
-        {/* Customers - Moved to bottom left on mobile */}
-        <div className="mt-6 md:absolute md:left-10 md:bottom-20 flex items-center gap-4">
-          <div className="flex -space-x-3 md:-space-x-4">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="relative w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-white">
-                <Image src={`/assets/2.png`} alt={`Customer ${i}`} fill className="object-cover" />
+              {/* Mobile Menu Button */}
+              <div className="md:hidden">
+                <button className="text-white focus:outline-none" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+                  <Menu className="h-6 w-6" />
+                </button>
               </div>
-            ))}
-          </div>
-          <span className="text-white text-base md:text-lg font-medium">Trusted by 2,000+ customers</span>
-        </div>
 
-        {/* Booking Card - Moved to bottom right on mobile */}
-        <div className="w-full md:absolute md:right-10 md:bottom-20 bg-white/10 backdrop-blur-lg p-6 border border-white/20 md:max-w-xs shadow-lg">
-          <h3 className="text-lg font-bold text-white mb-3">Quick Booking</h3>
-          <p className="text-white/80 text-sm mb-4">Get up to 30% discount on your first visit</p>
-          <Button className="w-full bg-white text-gray-900 hover:bg-white/90 font-medium text-sm">
-            Book Appointment
-          </Button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+              {/* Language Selector - Updated styling */}
+              <div className="relative group hidden md:block">
+                <button className="flex items-center gap-1 text-white rounded-full bg-white/10 px-3 py-1.5">
+                  <img src="https://flagcdn.com/w20/gb.png" alt="Australian Flag" className="w-5 h-3 object-cover" />
+                  <span className="text-sm">ENG</span>
+                  <ChevronDown className="h-3 w-3 opacity-50" />
+                </button>
+              </div>
+            </div>
+
+            {/* Mobile Menu */}
+            {isMobileMenuOpen && (
+              <div className="md:hidden bg-black/80 backdrop-blur-md w-full py-4 px-4">
+                <nav className="flex flex-col space-y-4">
+                  <Link
+                    href="#"
+                    className="text-sm font-medium text-white hover:text-white/80"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Home
+                  </Link>
+                  <Link
+                    href="#"
+                    className="text-sm font-medium text-white hover:text-white/80"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Services
+                  </Link>
+                  <Link
+                    href="#"
+                    className="text-sm font-medium text-white hover:text-white/80"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    About Us
+                  </Link>
+                  <Link
+                    href="#"
+                    className="text-sm font-medium text-white hover:text-white/80"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Contact
+                  </Link>
+                </nav>
+              </div>
+            )}
+          </div>
+
+          {/* Hero Content */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent">
+            <div className="container mx-auto h-full flex flex-col px-4 md:px-8">
+              {/* Text Content */}
+              <div className="mt-32 md:mt-40 max-w-[90vw] md:max-w-xl space-y-6 md:space-y-4 text-left">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium text-white leading-tight">
+                  Clear Focus,
+                  <br />
+                  Brighter Tomorrow
+                </h1>
+                <p className="text-white/90 text-sm sm:text-base max-w-xl">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                  ea commodo consequat.
+                </p>
+                <div className="flex items-center gap-6">
+                  <button
+                    className="flex items-center justify-center w-16 h-16 rounded-full border-2 border-white bg-transparent text-white hover:bg-white/10 transition-colors"
+                    aria-label="Play video"
+                  >
+                    <Play className="h-6 w-6" />
+                  </button>
+                  <span className="text-white text-lg font-normal border-b border-white pb-1">Play Testimonial Video</span>
+                </div>
+              </div>
+
+              {/* Bottom Section - Fixed positioning for desktop */}
+              <div className="absolute bottom-8 left-0 right-0 px-4 md:px-8">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end">
+                  {/* Customers - Updated styling to match reference */}
+                  <div className="mb-6 md:mb-0">
+                    <div className="flex items-center gap-4">
+                      <div className="flex -space-x-3">
+                        {[1, 2, 3].map((i) => (
+                          <div key={i} className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-white">
+                            <Image src={`/assets/2.png`} alt={`Customer ${i}`} fill className="object-cover" />
+                          </div>
+                        ))}
+                      </div>
+                      <span className="text-white text-sm md:text-base font-medium">
+                        30k+ customer are
+                        <br />
+                        satisfied with our service
+                      </span>
+                    </div>
+                    <Link href="#" className="flex items-center text-white text-sm mt-2 hover:underline">
+                      More Details <ArrowRight className="h-4 w-4 ml-1" />
+                    </Link>
+                  </div>
+
+                  {/* Booking Card - Updated styling */}
+                  <div className="w-full md:w-auto bg-white/10 backdrop-blur-md p-6 rounded-sm md:max-w-xs relative">
+                    <div className="absolute top-0 right-0 w-0 h-0 border-t-[20px] border-t-white/20 border-l-[20px] border-l-transparent transform translate-x-[-1px]"></div>
+                    <h3 className="text-xl font-bold text-white mb-2">Quick Booking</h3>
+                    <p className="text-white/80 text-sm mb-4">Get up to 30% discount on your first appointment</p>
+                    <Button className="w-full bg-white text-gray-900 hover:bg-white/90 font-medium text-sm rounded-full">
+                      Book Appointment
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
 
 
@@ -309,10 +352,10 @@ export default function Home() {
               ))}
             </div>
             <div className="flex justify-center mt-10">
-              <Button variant="outline" className="rounded-full px-8">
-                View More <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
+  <Button variant="outline" className="px-8">
+    View More <ArrowRight className="ml-2 h-4 w-4" />
+  </Button>
+</div>
           </div>
         </section>
 
@@ -347,8 +390,11 @@ export default function Home() {
                 </p>
 
                 <div className="pt-4">
-                  <Button className="rounded-full px-6 bg-black text-white hover:bg-black/80">
-                    Get Appointment For Nails <ArrowRight className="ml-2 h-4 w-4" />
+                  <Button className="rounded-full px-6 py-2.5 bg-black text-white hover:bg-black/80 flex items-center">
+                    Get Appointment For Nails
+                    <div className="ml-2 bg-white rounded-full p-1.5">
+                      <ArrowRight className="h-3.5 w-3.5 text-black" />
+                    </div>
                   </Button>
                 </div>
               </div>
@@ -408,15 +454,16 @@ export default function Home() {
                           className="object-cover w-full h-full group-hover:scale-105 transition-transform"
                         />
                       </div>
-                      <div className="bg-[#f5e8dd] p-4">
-                        <div className="flex items-center text-sm mb-2 text-gray-600">
-                          <Calendar className="h-4 w-4 mr-1" />
-                          <span>17 Feb, 2025</span>
+                      <div className="p-3 bg-white">
+                        <div className="flex items-center text-sm text-gray-500 mb-1">
+                          <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                          17 Feb, 2025
                         </div>
-                        <h3 className="font-semibold text-lg mb-1">Top 5 Bridals Makeup Trends In 2025</h3>
-                        <p className="text-xs text-gray-600">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                          labore et dolore magna.
+                        <h3 className="font-semibold text-lg">Top 5 Bridals Makeup Trends In 2025</h3>
+                        <p className="text-sm text-gray-600 mt-1">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...
                         </p>
                       </div>
                     </div>
@@ -455,11 +502,6 @@ export default function Home() {
                 <ChevronRight className="h-6 w-6" />
               </button>
             </div>
-
-            {/* View All Blogs Button
-            <div className="flex justify-center mt-10">
-              <Button className="rounded-full px-8 bg-black text-white hover:bg-black/80">View All Blogs</Button>
-            </div> */}
           </div>
         </section>
       </main>
