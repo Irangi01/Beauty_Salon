@@ -574,16 +574,16 @@ export default function Home() {
 
           {/* Bottom Links */}
           <div className="mt-12 pt-6 border-t border-white/20">
-            <div className="flex flex-col items-center gap-2 text-center">
-              <div className="flex flex-col md:flex-row gap-4">
-                <Link href="#" className="text-white/90 hover:text-white text-sm">Terms & Conditions</Link>
-                <Link href="#" className="text-white/90 hover:text-white text-sm">Privacy Policy</Link>
-              </div>
-              <p className="text-white/90 text-sm">
-                Copyright © 2025 GlamAuraStudio
-              </p>
-            </div>
-          </div>
+  <div className="flex flex-col items-center">
+    <div className="flex flex-wrap justify-center items-center gap-4 text-sm text-white/90">
+      <Link href="#" className="hover:text-white">Terms & Conditions</Link>
+      <span>|</span>
+      <Link href="#" className="hover:text-white">Privacy Policy</Link>
+      <span>|</span>
+      <span>Copyright © 2025 GlamAuraStudio</span>
+    </div>
+  </div>
+</div>
         </div>
       </footer>
     </div>
